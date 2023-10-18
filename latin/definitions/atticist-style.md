@@ -1,0 +1,1 @@
+using clarity and logic to speak well. Inspired by [Gorgias](gorgias.md).
