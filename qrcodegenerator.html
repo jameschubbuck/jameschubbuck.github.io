@@ -1,0 +1,41 @@
+<body>
+    jameschubbuck.com/qrcodegenerator
+    <br><br>
+    <input type="text" id="content" placeholder="Enter content">
+    <button type="button" id="generate">Generate QR Code</button>
+    <br><br>
+    <button id="backButton">back</button>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2"></script>
+<script>
+    function generateQRCode() {
+        const content = document.getElementById("content").value;
+        if (content.trim() === "") {
+            alert("Enter content");
+            return;
+        }
+
+        const qr = new QRious({
+            value: content,
+        });
+
+        const qrURL = qr.toDataURL("image/png");
+        const link = document.createElement("a");
+        link.href = qrURL;
+        link.download = "qrcode.png";
+        link.click();
+    }
+
+    document.getElementById("generate").addEventListener("click", generateQRCode);
+
+    document.getElementById("content").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            generateQRCode();
+        }
+    });
+</script>
+<script>
+    document.getElementById('backButton').addEventListener('click', function() {
+      window.history.back();
+    });
+</script>
