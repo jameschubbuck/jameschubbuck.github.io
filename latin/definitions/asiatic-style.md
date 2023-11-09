@@ -1,1 +1,0 @@
-Using rhythm and flourishes to speak well. Frequently used by lawyers trying to avoid the truth. Supported by [Hegesias of Magnesias](hegesias.md).

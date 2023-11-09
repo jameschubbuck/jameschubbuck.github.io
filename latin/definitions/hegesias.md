@@ -1,1 +1,0 @@
-Hegesias of Magnesias was a rhetorician and proponent of the [asiatic style](asiatic-style.md) of rhetoric.

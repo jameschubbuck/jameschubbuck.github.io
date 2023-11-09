@@ -1,1 +1,0 @@
-Sophist, but really [nihilist](nihilism.md), but proponent of [logos](logos.md).

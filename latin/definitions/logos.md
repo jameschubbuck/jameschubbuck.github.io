@@ -1,1 +1,0 @@
-logic or reason, sometimes seen as a divine by some philosophical systems.
