@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <!--title-->
+    <title>jameschubbuck.com/qrcodegenerator</title>
+    <!-- easter eggs -->
+    <script src="../scripts/eastereggs.js"></script>
+    <!-- styling -->
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
 <body>
     <h1>jameschubbuck.com/qrcodegenerator</h1>
     <br><br>
@@ -5,67 +17,15 @@
     <br><br>
     <button>
     <!-- TODO: disable wierd selection box, and button pressing. -->
-
-    <input type="text" id="content" placeholder="enter content">
+    <input style="font-family: 'Press Start 2P', serif;" type="text" id="content" placeholder="enter content">
     </button>
     <button type="button" id="generate">generate qr code</button>
     <br><br>
     <button id="backButton">back</button>
+    <!-- back button -->
+    <script src="../scripts/backbutton.js"></script>
+    <!-- qr code stuff -->
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2"></script>
+    <script src="../scripts/qrcode.js"></script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2"></script>
-<script>
-    function generateQRCode() {
-        const content = document.getElementById("content").value;
-        if (content.trim() === "") {
-            alert("Enter content");
-            return;
-        }
-
-        const qr = new QRious({
-            value: content,
-        });
-
-        const qrURL = qr.toDataURL("image/png");
-        const link = document.createElement("a");
-        link.href = qrURL;
-        link.download = "qrcode.png";
-        link.click();
-    }
-
-    document.getElementById("generate").addEventListener("click", generateQRCode);
-
-    document.getElementById("content").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            generateQRCode();
-        }
-    });
-</script>
-<script>
-    document.getElementById('backButton').addEventListener('click', function() {
-      window.history.back();
-    });
-</script>
-<script src="scripts/saveyourself.js"></script>
-<style>
-    html {
-      font-family: 'Press Start 2P', serif;
-    }
-    button {
-      font-family: 'Press Start 2P', serif;
-    }
-    input {
-        font-family: 'Press Start 2P', serif;
-        background-color: lightgrey;
-        border: 20px;
-    }
-    h1 {
-        text-decoration-line: underline;
-    }
-    button {
-        background-color: lightgrey;
-    }
-  </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-  </style>
+</html>
