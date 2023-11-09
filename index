@@ -1,7 +1,0 @@
-<body>
-  jameschubbuck.com
-  <br><br>
-  hello there
-  <br><br>
-  <button onclick="window.location.href='./qrcodegenerator'">QR Code Generator</button>
-</body>
