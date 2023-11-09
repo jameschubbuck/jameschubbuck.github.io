@@ -1,11 +1,18 @@
 <body>
-    jameschubbuck.com/qrcodegenerator
+    <h1>jameschubbuck.com/qrcodegenerator</h1>
     <br><br>
-    <input type="text" id="content" placeholder="Enter content">
-    <button type="button" id="generate">Generate QR Code</button>
+    make a qr code! or don't, i don't care.
+    <br><br>
+    <button>
+    <!-- TODO: disable wierd selection box, and button pressing. -->
+
+    <input type="text" id="content" placeholder="enter content">
+    </button>
+    <button type="button" id="generate">generate qr code</button>
     <br><br>
     <button id="backButton">back</button>
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2"></script>
 <script>
     function generateQRCode() {
@@ -40,3 +47,25 @@
     });
 </script>
 <script src="scripts/saveyourself.js"></script>
+<style>
+    html {
+      font-family: 'Press Start 2P', serif;
+    }
+    button {
+      font-family: 'Press Start 2P', serif;
+    }
+    input {
+        font-family: 'Press Start 2P', serif;
+        background-color: lightgrey;
+        border: 20px;
+    }
+    h1 {
+        text-decoration-line: underline;
+    }
+    button {
+        background-color: lightgrey;
+    }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  </style>
